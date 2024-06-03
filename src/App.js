@@ -1,9 +1,9 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Home from './component/Home';
+// import Home from './component/Home';
 import Header from './component/Header'; 
-import {Route, Routes} from "react-router-dom"
+import {Route, Switch} from "react-router-dom"
 import HomePage from './component/HomePage';
 import Aboutus from './component/Aboutus';
 import Contactus from './component/Contactus';
@@ -19,12 +19,16 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header/>
-        <Routes>
-          <Route element={<HomePage/>} path ='/' />
-          <Route element = {<Aboutus/>} path = '/about-us'/>
-          <Route element = {<Contactus/>} path = '/contact-us'/>
+        <Switch>
+        <Route component = {HomePage} path ='/' exact />
+          <Route component = {Aboutus} path = '/about-us' exact />
+          <Route component = {Contactus} path = '/contact-us' exact />
 
-        </Routes>
+          {/* <Route element={<HomePage/>} path ='/' />
+          <Route element = {<Aboutus/>} path = '/about-us'/>
+          <Route element = {<Contactus/>} path = '/contact-us'/> */}
+
+        </Switch>
         {/* {!this.state.flag? <Home/> : ""}<button onClick={()=>{
           this.setState({
             flag:  !this.state.flag,
