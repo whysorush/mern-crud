@@ -7,6 +7,8 @@ import {Route, Switch} from "react-router-dom"
 import HomePage from './component/HomePage';
 import Aboutus from './component/Aboutus';
 import Contactus from './component/Contactus';
+import AboutHoc from './component/AboutHoc';
+import FunctionalComponent from './component/FunctionalComponent';
 class App extends React.Component {
   constructor(props) {
     super(props) // instansiate parent class component, binding of method , initialize your state variable
@@ -23,6 +25,9 @@ class App extends React.Component {
         <Route component = {HomePage} path ='/' exact />
           <Route component = {Aboutus} path = '/about-us' exact />
           <Route component = {Contactus} path = '/contact-us' exact />
+
+          <Route component = {AboutHoc} path = '/about-hoc' exact />
+          <Route component = {FunctionalComponent} path = '/finctional-components' exact />
 
           {/* <Route element={<HomePage/>} path ='/' />
           <Route element = {<Aboutus/>} path = '/about-us'/>
