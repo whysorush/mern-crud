@@ -9,6 +9,7 @@ import Aboutus from './component/Aboutus';
 import Contactus from './component/Contactus';
 import AboutHoc from './component/AboutHoc';
 import FunctionalComponent from './component/FunctionalComponent';
+import NewHooks from './component/NewHooks';
 class App extends React.Component {
   constructor(props) {
     super(props) // instansiate parent class component, binding of method , initialize your state variable
@@ -28,6 +29,8 @@ class App extends React.Component {
 
           <Route component = {AboutHoc} path = '/about-hoc' exact />
           <Route component = {FunctionalComponent} path = '/finctional-components' exact />
+
+          <Route component = {NewHooks} path = '/new-hooks' exact />
 
           {/* <Route element={<HomePage/>} path ='/' />
           <Route element = {<Aboutus/>} path = '/about-us'/>
